@@ -16,13 +16,19 @@ app.get('/', (req, res) => {
     res.send(`Hello`);
 })
 
-const userRouter = require("./routes/userRouter");
+const currencyRouter = require("./routes/currencyRouter");
+const sizeRouter = require("./routes/sizeRouter");
+
+app.use("/api/currencies", currencyRouter);
+app.use("/api/sizes", sizeRouter);
+
+/*const userRouter = require("./routes/userRouter");
 const groupRouter = require("./routes/groupRouter");
 const typeRouter = require("./routes/typeRouter");
 
 app.use("/api/users", userRouter);
 app.use("/api/groups", groupRouter);
-app.use("/api/types", typeRouter);
+app.use("/api/types", typeRouter);*/
 
 const PORT = process.env.PORT || 8080;
 
