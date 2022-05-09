@@ -33,7 +33,7 @@ module.exports = {
                     }
                 }));
             } else {
-                sendError(res, 400, 'Sizes are missing')
+                sendResult(res, 'Sizes are missing')
             }
         } catch (error) {
             sendError(res, 400, 'Bad request')
